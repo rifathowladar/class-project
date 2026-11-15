@@ -17,7 +17,7 @@ mongoose.connect(process.env.MONGO_URI).then(()=>{console.log('connected')})
 app.post('/registration' ,registerControl)
 app.post('/login' ,loginControl)
 app.post('/attendance/:id', attenControl);
-app.post('/attend-update/:id/:attendanceId', attenUpdate); 
+app.post('/attend-update/:id', attenUpdate); 
 
 
 app.listen(port, ()=>{
